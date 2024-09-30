@@ -14,6 +14,8 @@ public class PemilihanSwitch09 {
         System.out.println("Masukkan operator ( + - * :)");
         operator = sc.next(). charAt(0);
 
+        boolean operatorValid = true;
+
         switch (operator) {
             case '+':
                 hasil = angka1 + angka2 ;
@@ -24,11 +26,16 @@ public class PemilihanSwitch09 {
                 hasil = angka1*angka2;
             case '/' :
                 hasil = angka1/angka2;
+            System.out.println("pembagian dengan nol tidak diperbolehkan");
+            operatorValid = false; 
             default:
+            System.out.print(" Operator yang dipilih tidak sesuai ");
+            operatorValid = false;
                 break;
 
+
         }
-        System.out.println( angka1 + operator + angka2 + "=" + hasil  );
+        System.out.println(angka1 + "" +  operator + "" + angka2 + "=" + hasil  );
 
     }
     
