@@ -31,8 +31,37 @@ public class Siakad09 {
 
         nilaiAkhir = (nilaiKuis*0.20 + nilaiTugas*0.15 + nilaiUTS*0.30 + nilaiUAS*0.35);
 
-        System.out.println("Nama:" + nama + "nim:" + nim);
-        System.out.println("kelas:" + kelas + "absen:" + absen);
-        System.out.println("Nilai akhir:" + nilaiAkhir);
+        String nilaiAkhirHuruf;
+        String kualifikasi;
+
+        if (nilaiAkhir > 80 && nilaiAkhir <= 100) {
+            nilaiAkhirHuruf = "A";
+            kualifikasi = "Sangat Baik";
+        } else if (nilaiAkhir > 73 && nilaiAkhir <= 80) {
+            nilaiAkhirHuruf = "B+";
+            kualifikasi = "Lebih dari baik";
+        } else if (nilaiAkhir > 65 && nilaiAkhir <= 73) {
+            nilaiAkhirHuruf = "B";
+            kualifikasi = "Baik";
+        } else if (nilaiAkhir > 60 && nilaiAkhir <= 65) {
+            nilaiAkhirHuruf = "C+";
+            kualifikasi = "Lebih dari cukup";
+        } else if (nilaiAkhir > 50 && nilaiAkhir <= 60) {
+            nilaiAkhirHuruf = "C";
+            kualifikasi = "Cukup";
+        } else if (nilaiAkhir > 39 && nilaiAkhir <= 50) {
+            nilaiAkhirHuruf = "D";
+            kualifikasi = "Kurang";
+        } else  {
+            nilaiAkhirHuruf = "F";
+            kualifikasi = "Gagal";
+        }{
+            
+        }
+
+        System.out.print(" Mahasiswa dengan nama : " + nama + "NIM : " + nim + "Kelas : " + kelas + "Nomor absen : " + absen);
+        System.out.print("Nilai akhir:" + nilaiAkhir);
+        System.err.print("Nilai Akhir Huruf : " + nilaiAkhirHuruf);
+        System.out.print("Kualifikasi : " + kualifikasi );
     }
 }
